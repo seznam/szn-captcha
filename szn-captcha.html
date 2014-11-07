@@ -1,0 +1,103 @@
+<style>
+szn-captcha {
+	display: inline-block;
+}
+
+szn-captcha img {
+	float: left;
+}
+
+szn-captcha button {
+	all: reset;
+	border: none;
+	background-color: transparent;
+	color: #00d;
+	cursor: pointer;
+}
+
+szn-captcha button:hover {
+	text-decoration: underline;
+}
+
+szn-captcha button::before {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+szn-captcha button:first-of-type::before {
+	content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSI+Cgk8ZyBpZD0iZzEiPjxwb2x5Z29uIGlkPSJwb2x5Z29uMSIgcG9pbnRzPSIzOS4zODksMTMuNzY5IDIyLjIzNSwyOC42MDYgNiwyOC42MDYgNiw0Ny42OTkgMjEuOTg5LDQ3LjY5OSAzOS4zODksNjIuNzUgMzkuMzg5LDEzLjc2OSIgc3R5bGU9InN0cm9rZTojMTExMTExO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lam9pbjpyb3VuZDtmaWxsOiMxMTExMTE7Ii8+PHBhdGggaWQ9InBhdGgxIiBkPSJNIDQ4LjEyOCw0OS4wMyBDIDUwLjA1Nyw0NS45MzQgNTEuMTksNDIuMjkxIDUxLjE5LDM4LjM3NyBDIDUxLjE5LDM0LjM5OSA1MC4wMjYsMzAuNzAzIDQ4LjA0MywyNy41NzciIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMxMTExMTE7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQiLz4KPHBhdGggaWQ9InBhdGgyIiBkPSJNIDU1LjA4MiwyMC41MzcgQyA1OC43NzcsMjUuNTIzIDYwLjk2NiwzMS42OTQgNjAuOTY2LDM4LjM3NyBDIDYwLjk2Niw0NC45OTggNTguODE1LDUxLjExNSA1NS4xNzgsNTYuMDc2IiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMTExMTExO3N0cm9rZS13aWR0aDo1O3N0cm9rZS1saW5lY2FwOnJvdW5kIi8+CjxwYXRoIGlkPSJwYXRoMSIgZD0iTSA2MS43MSw2Mi42MTEgQyA2Ni45NzcsNTUuOTQ1IDcwLjEyOCw0Ny41MzEgNzAuMTI4LDM4LjM3OCBDIDcwLjEyOCwyOS4xNjEgNjYuOTM2LDIwLjY5NiA2MS42MDksMTQuMDEiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMxMTExMTE7c3Ryb2tlLXdpZHRoOjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQiLz4KPC9nPgo8L3N2Zz4K);
+}
+
+szn-captcha button:last-of-type::before {
+	content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDgwIDQ4MCIgPgogIDxnPgogIAk8cGF0aCBkPSJNMzgzLjQzNCwxNzIuNTAyYy0yNS4zMzYtNTguMjQxLTgxLjk5OC05NS42NDgtMTQ1Ljg2MS05NS42NDhjLTY1LjMwOSwwLTEyNSw0MC45MjgtMTQ4LjUxNCwxMDEuODI3bDQ5LjUsMTkuMTE3ICAgYzE1LjY3Mi00MC42MTcsNTUuNDY5LTY3Ljg5NCw5OS4wMTQtNjcuODk0YzQyLjAyLDAsNzkuMTk3LDI0LjM4Niw5Ni40MDgsNjIuMzMybC0zNi4xMTcsMTQuNDI4bDkyLjM1Miw1My4yNzlsMjcuMDEtMTAwLjkzMyAgIEwzODMuNDM0LDE3Mi41MDJ6Ii8+CiAgCTxwYXRoIGQ9Ik0yMzcuNTczLDM0Mi4xMDFjLTQxLjYzOSwwLTc5LjYxNS0yNS4xMTUtOTYuNTkyLTYyLjgxOWwzNS42MDQtMTMuNzYzbC05MS4zODctNTIuMTE5bC0yNy45NzUsOTguMjQ5bDM0LjA4LTEzLjE3MiAgIGMyNC44NTIsNTguMDE4LDgyLjg1OSw5Ni42NzEsMTQ2LjI3LDk2LjY3MWM2NS41NTEsMCwxMjMuNTk4LTM5LjMzNiwxNDcuODcxLTEwMC4xOTZsLTQ5LjI2OC0xOS42NTIgICBDMzE5Ljk4MSwzMTUuODc3LDI4MS4yODgsMzQyLjEwMSwyMzcuNTczLDM0Mi4xMDF6Ii8+CiAgPC9nPgo8L3N2Zz4K);
+}
+
+</style>
+<template>
+	<img />
+	<button>Přehrát kód</button><br/>
+	<button>Nový kód</button>
+</template>
+
+<script>
+	(function() {
+		var base = "//captcha.seznam.cz";
+
+		var doc = (document._currentScript || document.currentScript).ownerDocument;
+		var template = doc.querySelector("template");
+		var proto = Object.create(HTMLElement.prototype);
+
+		var updateImage = function(hash) {
+			this.querySelector("img").src = base + "/captcha.getImage?hash=" + hash;
+		}
+
+		proto.createdCallback = function() {
+			this.appendChild(template.content.cloneNode(true));
+			if (this.hash) {
+				updateImage.call(this, this.hash);
+			} else {
+				this.newHash();
+			}
+			
+			this.querySelectorAll("button")[0].addEventListener("click", this.play.bind(this));
+			this.querySelectorAll("button")[1].addEventListener("click", this.newHash.bind(this));
+		}
+
+		proto.attributeChangedCallback = function(attrName, oldValue, newValue) {
+			switch (attrName) {
+				case "hash":
+					updateImage.call(this, newValue);
+				break;
+			}
+		}
+
+		proto.newHash = function() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("get", base + "/captcha.create", true);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState != 4 || xhr.status != 200) { return; }
+				this.hash = xhr.responseText;
+			}.bind(this);
+			xhr.send();
+		}
+		
+		proto.play = function() {
+			var url = base + "/captcha.getAudio?hash=" + this.hash;
+			new Audio(url).play();
+		}
+
+		Object.defineProperty(proto, "hash", {
+			set: function(value) {
+				this.setAttribute("hash", value);
+			},
+			get: function() {
+				return this.getAttribute("hash");
+			}
+		});
+
+		document.registerElement("szn-captcha", {prototype:proto});
+	})();
+</script>
