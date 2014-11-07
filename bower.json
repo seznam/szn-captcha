@@ -1,0 +1,28 @@
+{
+  "name": "szn-captcha",
+  "version": "0.0.0",
+  "homepage": "https://github.com/seznam/szn-captcha",
+  "authors": [
+    "Ondrej Zara <ondrej.zara@firma.seznam.cz>"
+  ],
+  "description": "<szn-captcha> web component",
+  "main": "szn-captcha.html",
+  "keywords": [
+    "web",
+    "components",
+    "seznam",
+    "szn",
+    "captcha"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "~0.4.2"
+  }
+}
