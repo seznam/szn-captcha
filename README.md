@@ -1,4 +1,7 @@
-szn-captcha
-===========
+# &lt;szn-captcha&gt;
 
-&lt;szn-captcha> web component
+```
+bower install szn-captcha [--save]
+```
+
+Více informací na https://github.com/seznam/seznam-web-components.
